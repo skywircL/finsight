@@ -1,0 +1,37 @@
+[build-system]
+requires = ["hatchling>=1.25"]
+build-backend = "hatchling.build"
+
+[project]
+name = "finsight"
+version = "0.1.0"
+description = "Evidence-grounded and auditable financial report analysis agent"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+  "streamlit>=1.41,<2",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.3", "ruff>=0.9"]
+train = [
+  "accelerate>=1.14,<2",
+  "peft>=0.19,<1",
+  "torch>=2.10,<3",
+  "transformers>=5.5,<6",
+]
+
+[project.scripts]
+finsight-eval = "finsight.evaluation:main"
+finsight-prepare-training = "finsight.training.cli:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/finsight"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"

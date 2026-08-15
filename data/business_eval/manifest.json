@@ -1,0 +1,12 @@
+{
+  "schema_version": "finsight-benchmark-manifest-v1",
+  "suite": "preliminary-business-eval",
+  "frozen": true,
+  "task_count": 4,
+  "normal_tasks": 3,
+  "refusal_tasks": 1,
+  "source_file": "data/business_eval/cases.json",
+  "sha256": "6661c3926814cbb5f18befa609986d5b090af06d5ddcf9c2701d15e7e7fd81f7",
+  "training_overlap_allowed": false,
+  "notes": "合成非敏感初赛业务案例；复赛新增任务不得修改本冻结文件。"
+}

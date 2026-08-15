@@ -1,0 +1,50 @@
+# Operating-system and editor state
+.DS_Store
+.idea/
+.vscode/
+
+# Local Python environments and caches
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+build/
+dist/
+*.egg-info/
+
+# Local secrets
+.env
+.env.*
+!.env.example
+.streamlit/secrets.toml
+
+# Third-party raw datasets are downloaded locally.
+/data/raw/
+
+# Generated evaluation, training, packaging, and rendering output. Keep only the
+# small frozen JSON files that the shipped Streamlit application reads.
+/artifacts/*
+!/artifacts/business_evaluation_v1.json
+!/artifacts/e2_e3_comparison_dev_100.json
+/outputs/*
+!/outputs/teacher_deepseek_pilot_v3/
+/outputs/teacher_deepseek_pilot_v3/*
+!/outputs/teacher_deepseek_pilot_v3/quality_audit.json
+/output/
+/tmp/
+/eval/
+
+# Competition submission material and internal working documents. These may stay
+# on a developer machine, but are not part of the product repository.
+/configs/preliminary.yaml
+/docs/DEMO_SCRIPT.md
+/docs/EXECUTION_PLAN.md
+/docs/NEXT_STAGE_DESIGN.md
+/docs/PITCH_DECK_OUTLINE.md
+/docs/PPT_GENERATION_PROMPT.md
+/docs/PROJECT_BRIEF.md
+/docs/SUBMISSION_CHECKLIST.md

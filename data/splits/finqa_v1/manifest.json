@@ -1,0 +1,68 @@
+{
+  "algorithm": "sha256(seed\\0task_id), ascending fixed slices",
+  "checks": {
+    "frozen_test_used_for_training": false,
+    "partitions_disjoint": true,
+    "source_splits_disjoint": true,
+    "source_task_ids_unique": true,
+    "train_fully_partitioned": true
+  },
+  "frozen": true,
+  "partitions": {
+    "checkpoint_selection": {
+      "count": 883,
+      "file": "checkpoint_selection.jsonl",
+      "sha256": "17b71860381f720dc820aec4cb0e7ba5a66a9b58dc0976e7c4df52d4b0e89ca6",
+      "source_split": "dev"
+    },
+    "frozen_test": {
+      "count": 1147,
+      "file": "frozen_test.jsonl",
+      "sha256": "21ce707764b99c9e3434e59d8512f4d2ff067f06c6077ba337ba84ffa0d167b8",
+      "source_split": "test"
+    },
+    "grpo_train": {
+      "count": 1500,
+      "file": "grpo_train.jsonl",
+      "sha256": "fe40838263f46715c13d36a3ec096da9b1b4ee97c1e36d41e133c1739c55c669",
+      "source_split": "train"
+    },
+    "grpo_validation": {
+      "count": 251,
+      "file": "grpo_validation.jsonl",
+      "sha256": "6bff137074c4ab7621a7afd995c40cca2a9ede6e77737bd559b57728f7e1a254",
+      "source_split": "train"
+    },
+    "sft_train": {
+      "count": 4000,
+      "file": "sft_train.jsonl",
+      "sha256": "1fe811b7f8442f1fde8d2f1935bcf75c9dbf4f7dca370e73c119eaa160b3705f",
+      "source_split": "train"
+    },
+    "sft_validation": {
+      "count": 500,
+      "file": "sft_validation.jsonl",
+      "sha256": "db04214f491ad6ebd1749573491ecf2692f415ea9505bbcb444238af241b499c",
+      "source_split": "train"
+    }
+  },
+  "schema_version": "finsight-finqa-splits-v1",
+  "seed": "finsight-finqa-v1",
+  "sources": {
+    "dev": {
+      "count": 883,
+      "path": "data/raw/finqa/dev.json",
+      "sha256": "a847fb7e0d61a3125a1e2909852df6b89f1ee64d2c5ff1bf689e332214deee51"
+    },
+    "test": {
+      "count": 1147,
+      "path": "data/raw/finqa/test.json",
+      "sha256": "831dbfb2e785dbc227f895ce3f24046433467aec67b09db2bd6ac7692a8a30dc"
+    },
+    "train": {
+      "count": 6251,
+      "path": "data/raw/finqa/train.json",
+      "sha256": "49f237eb9779b569473b26b08048867d04635a7cc39ad6a7a5664c55bb428db6"
+    }
+  }
+}

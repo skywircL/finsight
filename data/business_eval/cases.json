@@ -1,0 +1,103 @@
+[
+  {
+    "task_id": "revenue_growth",
+    "title": "收入增长分析",
+    "question": "2023 revenue compared with 2022 revenue percentage change",
+    "program": "multiply(divide(subtract(1250, 1100), 1100), const_100)",
+    "unit": "%",
+    "expected_evidence_ids": ["income_statement"],
+    "risk_note": "收入增长需结合毛利率和现金回款判断增长质量。",
+    "evidence": [
+      {
+        "evidence_id": "income_statement",
+        "text": "[page=42] [table=Income statement] [unit=million CNY] metric=revenue 2023=1250 2022=1100",
+        "kind": "table",
+        "page": "42",
+        "source": "示例公司2023年度报告"
+      },
+      {
+        "evidence_id": "cost_note",
+        "text": "[page=77] Cost of sales increased because raw material prices rose.",
+        "kind": "text",
+        "page": "77",
+        "source": "示例公司2023年度报告"
+      }
+    ]
+  },
+  {
+    "task_id": "profit_growth",
+    "title": "营业利润变化分析",
+    "question": "2023 operating profit compared with 2022 operating profit percentage change",
+    "program": "multiply(divide(subtract(562, 491), 491), const_100)",
+    "unit": "%",
+    "expected_evidence_ids": ["profit_table"],
+    "risk_note": "营业利润增速应与收入增速对比，判断利润改善是否具有持续性。",
+    "evidence": [
+      {
+        "evidence_id": "profit_table",
+        "text": "[page=51] [table=Consolidated statements] [unit=million CNY] metric=operating profit 2023=562 2022=491",
+        "kind": "table",
+        "page": "51",
+        "source": "示例公司2023年度报告"
+      },
+      {
+        "evidence_id": "segment_note",
+        "text": "[page=89] The consumer segment remained the largest operating segment.",
+        "kind": "text",
+        "page": "89",
+        "source": "示例公司2023年度报告"
+      }
+    ]
+  },
+  {
+    "task_id": "cashflow_change",
+    "title": "经营现金流变化分析",
+    "question": "2023 operating cash flow compared with 2022 operating cash flow percentage change",
+    "program": "multiply(divide(subtract(310, 400), 400), const_100)",
+    "unit": "%",
+    "expected_evidence_ids": ["cashflow_table"],
+    "risk_note": "经营现金流下降而收入增长，需进一步核查应收账款和存货占用。",
+    "evidence": [
+      {
+        "evidence_id": "cashflow_table",
+        "text": "[page=58] [table=Cash flow statement] [unit=million CNY] metric=operating cash flow 2023=310 2022=400",
+        "kind": "table",
+        "page": "58",
+        "source": "示例公司2023年度报告"
+      },
+      {
+        "evidence_id": "receivable_note",
+        "text": "[page=96] Trade receivables increased during the reporting period.",
+        "kind": "text",
+        "page": "96",
+        "source": "示例公司2023年度报告"
+      }
+    ]
+  },
+  {
+    "task_id": "missing_inventory",
+    "title": "存货周转率核查",
+    "question": "2023 inventory turnover based on cost of sales and average inventory",
+    "program": "divide(730, 125)",
+    "unit": "次",
+    "expected_evidence_ids": ["inventory_table"],
+    "risk_note": "缺少平均存货证据时不得推断存货周转率。",
+    "evidence": [
+      {
+        "evidence_id": "cost_sales_table",
+        "text": "[page=44] [table=Income statement] [unit=million CNY] metric=cost of sales 2023=730",
+        "kind": "table",
+        "page": "44",
+        "source": "示例公司2023年度报告"
+      },
+      {
+        "evidence_id": "inventory_policy",
+        "text": "[page=102] Inventories are measured at the lower of cost and net realisable value.",
+        "kind": "text",
+        "page": "102",
+        "source": "示例公司2023年度报告"
+      }
+    ]
+  }
+]
+

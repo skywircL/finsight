@@ -1,0 +1,35 @@
+{
+  "schema_version": "finsight-retrieval-comparison-v1",
+  "dataset": "data/raw/finqa/dev.json",
+  "fixed_denominator": 100,
+  "top_k": 5,
+  "baseline": "E2 BM25",
+  "candidate": "E3 Table-aware BM25",
+  "metrics": {
+    "recall_at_k": {
+      "baseline": 0.8441666666666666,
+      "candidate": 0.8541666666666666,
+      "delta": 0.010000000000000009
+    },
+    "mrr": {
+      "baseline": 0.757,
+      "candidate": 0.8046666666666666,
+      "delta": 0.047666666666666635
+    },
+    "gold_evidence_coverage": {
+      "baseline": 0.74,
+      "candidate": 0.75,
+      "delta": 0.010000000000000009
+    },
+    "table_evidence_recall": {
+      "baseline": 0.7627118644067796,
+      "candidate": 0.788135593220339,
+      "delta": 0.025423728813559365
+    },
+    "text_evidence_recall": {
+      "baseline": 0.8780487804878049,
+      "candidate": 0.8536585365853658,
+      "delta": -0.024390243902439046
+    }
+  }
+}

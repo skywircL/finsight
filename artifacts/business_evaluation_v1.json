@@ -1,0 +1,227 @@
+{
+  "schema_version": "finsight-business-suite-v1",
+  "suite": "data/business_eval/cases.json",
+  "suite_sha256": "6661c3926814cbb5f18befa609986d5b090af06d5ddcf9c2701d15e7e7fd81f7",
+  "fixed_denominator": 4,
+  "summary": {
+    "delivered": 3,
+    "correct_refusals": 1,
+    "reward_valid": 4,
+    "mean_reward": 0.925
+  },
+  "evaluations": [
+    {
+      "schema_version": "finsight-evaluation-v1",
+      "task_id": "revenue_growth",
+      "outcome_panel": {
+        "version": "finsight-reward-v1",
+        "reward": 1.0,
+        "reward_valid": true,
+        "outcome": "verified_delivery",
+        "program_safe": true,
+        "answer_available": true,
+        "evidence_coverage": 1.0,
+        "expected_refusal": false,
+        "correct_refusal": false,
+        "reason": "答案、受限程序和必需证据均通过确定性检查。",
+        "terminal_state": "DELIVERED",
+        "verified": true
+      },
+      "evidence_panel": {
+        "required_evidence_ids": [
+          "income_statement"
+        ],
+        "retrieved_evidence_ids": [
+          "income_statement"
+        ],
+        "missing_evidence_ids": [],
+        "coverage": 1.0,
+        "all_required_covered": true
+      },
+      "trajectory_panel": {
+        "event_count": 6,
+        "event_ids_unique": true,
+        "terminal_consistent": true,
+        "state_path_valid": true,
+        "actions": {
+          "ingest_task": 1,
+          "plan_analysis": 1,
+          "retrieve_evidence": 1,
+          "execute_program": 1,
+          "verify_result": 1,
+          "deliver_report": 1
+        },
+        "rejected_event_ids": [],
+        "repeat_actions": 0
+      },
+      "deterministic_panel": {
+        "program_present": true,
+        "program_safe": true,
+        "answer_available": true,
+        "arbitrary_code_execution": false,
+        "infrastructure_valid": true
+      }
+    },
+    {
+      "schema_version": "finsight-evaluation-v1",
+      "task_id": "profit_growth",
+      "outcome_panel": {
+        "version": "finsight-reward-v1",
+        "reward": 1.0,
+        "reward_valid": true,
+        "outcome": "verified_delivery",
+        "program_safe": true,
+        "answer_available": true,
+        "evidence_coverage": 1.0,
+        "expected_refusal": false,
+        "correct_refusal": false,
+        "reason": "答案、受限程序和必需证据均通过确定性检查。",
+        "terminal_state": "DELIVERED",
+        "verified": true
+      },
+      "evidence_panel": {
+        "required_evidence_ids": [
+          "profit_table"
+        ],
+        "retrieved_evidence_ids": [
+          "profit_table",
+          "segment_note"
+        ],
+        "missing_evidence_ids": [],
+        "coverage": 1.0,
+        "all_required_covered": true
+      },
+      "trajectory_panel": {
+        "event_count": 6,
+        "event_ids_unique": true,
+        "terminal_consistent": true,
+        "state_path_valid": true,
+        "actions": {
+          "ingest_task": 1,
+          "plan_analysis": 1,
+          "retrieve_evidence": 1,
+          "execute_program": 1,
+          "verify_result": 1,
+          "deliver_report": 1
+        },
+        "rejected_event_ids": [],
+        "repeat_actions": 0
+      },
+      "deterministic_panel": {
+        "program_present": true,
+        "program_safe": true,
+        "answer_available": true,
+        "arbitrary_code_execution": false,
+        "infrastructure_valid": true
+      }
+    },
+    {
+      "schema_version": "finsight-evaluation-v1",
+      "task_id": "cashflow_change",
+      "outcome_panel": {
+        "version": "finsight-reward-v1",
+        "reward": 1.0,
+        "reward_valid": true,
+        "outcome": "verified_delivery",
+        "program_safe": true,
+        "answer_available": true,
+        "evidence_coverage": 1.0,
+        "expected_refusal": false,
+        "correct_refusal": false,
+        "reason": "答案、受限程序和必需证据均通过确定性检查。",
+        "terminal_state": "DELIVERED",
+        "verified": true
+      },
+      "evidence_panel": {
+        "required_evidence_ids": [
+          "cashflow_table"
+        ],
+        "retrieved_evidence_ids": [
+          "cashflow_table"
+        ],
+        "missing_evidence_ids": [],
+        "coverage": 1.0,
+        "all_required_covered": true
+      },
+      "trajectory_panel": {
+        "event_count": 6,
+        "event_ids_unique": true,
+        "terminal_consistent": true,
+        "state_path_valid": true,
+        "actions": {
+          "ingest_task": 1,
+          "plan_analysis": 1,
+          "retrieve_evidence": 1,
+          "execute_program": 1,
+          "verify_result": 1,
+          "deliver_report": 1
+        },
+        "rejected_event_ids": [],
+        "repeat_actions": 0
+      },
+      "deterministic_panel": {
+        "program_present": true,
+        "program_safe": true,
+        "answer_available": true,
+        "arbitrary_code_execution": false,
+        "infrastructure_valid": true
+      }
+    },
+    {
+      "schema_version": "finsight-evaluation-v1",
+      "task_id": "missing_inventory",
+      "outcome_panel": {
+        "version": "finsight-reward-v1",
+        "reward": 0.7,
+        "reward_valid": true,
+        "outcome": "correct_refusal",
+        "program_safe": true,
+        "answer_available": false,
+        "evidence_coverage": 0.0,
+        "expected_refusal": true,
+        "correct_refusal": true,
+        "reason": "关键输入不可核验，系统正确拒答。",
+        "terminal_state": "REFUSED",
+        "verified": false
+      },
+      "evidence_panel": {
+        "required_evidence_ids": [
+          "inventory_table"
+        ],
+        "retrieved_evidence_ids": [
+          "cost_sales_table",
+          "inventory_policy"
+        ],
+        "missing_evidence_ids": [
+          "inventory_table"
+        ],
+        "coverage": 0.0,
+        "all_required_covered": false
+      },
+      "trajectory_panel": {
+        "event_count": 5,
+        "event_ids_unique": true,
+        "terminal_consistent": true,
+        "state_path_valid": true,
+        "actions": {
+          "ingest_task": 1,
+          "plan_analysis": 1,
+          "retrieve_evidence": 1,
+          "execute_program": 1,
+          "refuse_analysis": 1
+        },
+        "rejected_event_ids": [
+          "e0005"
+        ],
+        "repeat_actions": 0
+      },
+      "deterministic_panel": {
+        "program_present": true,
+        "program_safe": true,
+        "answer_available": false,
+        "arbitrary_code_execution": false,
+        "infrastructure_valid": true
+      }
+    }
+  ]
+}

@@ -1,0 +1,356 @@
+{
+  "action_distribution": {
+    "calculate": 6,
+    "deliver": 4,
+    "emit_program": 7,
+    "open_evidence": 21,
+    "search": 23,
+    "select_evidence": 13,
+    "verify": 10
+  },
+  "actions": 84,
+  "cases": [
+    {
+      "accepted": true,
+      "answer_match": true,
+      "delivered": true,
+      "evidence_coverage": 1.0,
+      "failed_events": [],
+      "primary_error": null,
+      "programs": [
+        "divide(const_2356,const_3749)"
+      ],
+      "question": "in 2013 , what percent of short duration advances is from the us?",
+      "rejection_reasons": [],
+      "schema_repairs": 0,
+      "search_queries": [
+        "2013 short duration advances US percent",
+        "short-duration advances 2013 U.S. total"
+      ],
+      "selected_history": [
+        [
+          "table_3",
+          "table_1"
+        ],
+        [
+          "table_3",
+          "table_1",
+          "table_2"
+        ],
+        [
+          "table_3",
+          "table_1",
+          "table_2",
+          "text_2",
+          "text_3"
+        ],
+        [
+          "table_3",
+          "table_1",
+          "table_2"
+        ],
+        [
+          "table_3",
+          "table_1",
+          "table_2",
+          "text_2",
+          "text_3"
+        ]
+      ],
+      "steps": 18,
+      "task_id": "STT/2013/page_71.pdf-3",
+      "termination_reason": "delivered",
+      "verdict": "clean_sft_candidate",
+      "verification_history": [
+        {
+          "evidence_coverage": 0.6666666666666666,
+          "passed": false,
+          "reason": "关键证据未被完整召回。"
+        },
+        {
+          "evidence_coverage": 0.6666666666666666,
+          "passed": false,
+          "reason": "关键证据未被完整召回。"
+        },
+        {
+          "evidence_coverage": 1.0,
+          "passed": true,
+          "reason": "数字、公式和证据检查通过。"
+        }
+      ]
+    },
+    {
+      "accepted": false,
+      "answer_match": true,
+      "delivered": true,
+      "evidence_coverage": 1.0,
+      "failed_events": [
+        {
+          "action": {
+            "arguments": {},
+            "name": "search"
+          },
+          "event_id": "e0001",
+          "message": "动作缺少参数：query。",
+          "status": "rejected"
+        },
+        {
+          "action": {
+            "arguments": {
+              "expression": "divide(706,8906)",
+              "target": "percent"
+            },
+            "name": "emit_program"
+          },
+          "event_id": "e0013",
+          "message": "动作缺少参数：program。",
+          "status": "rejected"
+        }
+      ],
+      "primary_error": "action_rejected",
+      "programs": [
+        "divide(706,8906)"
+      ],
+      "question": "what percent of total aggregate debt maturities as of december 31 , 2011 are due in 2014?",
+      "rejection_reasons": [
+        "action_not_completed"
+      ],
+      "schema_repairs": 0,
+      "search_queries": [
+        "",
+        "total aggregate debt maturities as of December 31 2011 due in 2014",
+        "2014 debt maturities due 2011 aggregate table",
+        "8906",
+        "2014 due 706",
+        "total debt 8906 706",
+        "2013 2014 2015 2016 thereafter",
+        "2012 2013 aggregate debt maturities table"
+      ],
+      "selected_history": [
+        [
+          "table_6",
+          "table_2"
+        ]
+      ],
+      "steps": 17,
+      "task_id": "UNP/2011/page_78.pdf-3",
+      "termination_reason": "delivered",
+      "verdict": "task_succeeded_but_trace_unclean",
+      "verification_history": [
+        {
+          "evidence_coverage": 1.0,
+          "passed": true,
+          "reason": "数字、公式和证据检查通过。"
+        }
+      ]
+    },
+    {
+      "accepted": false,
+      "answer_match": true,
+      "delivered": true,
+      "evidence_coverage": 1.0,
+      "failed_events": [
+        {
+          "action": {
+            "arguments": {},
+            "name": "search"
+          },
+          "event_id": "e0001",
+          "message": "动作缺少参数：query。",
+          "status": "rejected"
+        }
+      ],
+      "primary_error": "action_rejected",
+      "programs": [
+        "subtract(const_31_62,const_26_35),divide(#0,const_31_62),multiply(#1,const_100)",
+        "subtract(const_31_62,const_26_35),divide(#0,const_31_62)"
+      ],
+      "question": "what was the percentage discount given in the reset of convertible preferred stock issued in the private offering ?",
+      "rejection_reasons": [
+        "action_not_completed"
+      ],
+      "schema_repairs": 0,
+      "search_queries": [
+        "",
+        "percentage discount reset of convertible preferred stock private offering",
+        "percentage discount reset convertible preferred stock"
+      ],
+      "selected_history": [
+        [
+          "text_14"
+        ]
+      ],
+      "steps": 13,
+      "task_id": "C/2008/page_100.pdf-1",
+      "termination_reason": "delivered",
+      "verdict": "task_succeeded_but_trace_unclean",
+      "verification_history": [
+        {
+          "evidence_coverage": 1.0,
+          "passed": false,
+          "reason": "计算结果与验证值不一致。"
+        },
+        {
+          "evidence_coverage": 1.0,
+          "passed": true,
+          "reason": "数字、公式和证据检查通过。"
+        }
+      ]
+    },
+    {
+      "accepted": true,
+      "answer_match": true,
+      "delivered": true,
+      "evidence_coverage": 1.0,
+      "failed_events": [],
+      "primary_error": null,
+      "programs": [
+        "subtract(const_431,const_100)"
+      ],
+      "question": "what was the cumulative change in value for apple inc . between 2008 and 2013?",
+      "rejection_reasons": [],
+      "schema_repairs": 0,
+      "search_queries": [
+        "Apple Inc 2008 2013 cumulative change in value"
+      ],
+      "selected_history": [
+        [
+          "table_1",
+          "text_11"
+        ]
+      ],
+      "steps": 8,
+      "task_id": "AAPL/2013/page_27.pdf-4",
+      "termination_reason": "delivered",
+      "verdict": "clean_sft_candidate",
+      "verification_history": [
+        {
+          "evidence_coverage": 1.0,
+          "passed": true,
+          "reason": "数字、公式和证据检查通过。"
+        }
+      ]
+    },
+    {
+      "accepted": false,
+      "answer_match": false,
+      "delivered": false,
+      "evidence_coverage": 0.5,
+      "failed_events": [
+        {
+          "action": {
+            "arguments": {
+              "evidence_id": "table_1"
+            },
+            "name": "select_evidence"
+          },
+          "event_id": "e0003",
+          "message": "动作缺少参数：evidence_ids。",
+          "status": "rejected"
+        },
+        {
+          "action": {
+            "arguments": {
+              "evidence_id": "text_2"
+            },
+            "name": "open_evidence"
+          },
+          "event_id": "e0016",
+          "message": "只能打开最近一次搜索结果中的 evidence_id。",
+          "status": "rejected"
+        }
+      ],
+      "primary_error": "action_rejected",
+      "programs": [
+        "subtract(33584, 48407), divide(#0, 48407)"
+      ],
+      "question": "what is the percent change excess central bank balances from 2016 to 2017?",
+      "rejection_reasons": [
+        "action_not_completed",
+        "not_verified_delivery",
+        "answer_mismatch",
+        "incomplete_gold_evidence"
+      ],
+      "schema_repairs": 0,
+      "search_queries": [
+        "excess central bank balances 2016 2017",
+        "excess central bank balances december 31 2017 2016",
+        "excess central bank balances 48.40 billion 2016",
+        "\"excess central bank balances\"",
+        "central bank balances",
+        "excess regulatory requirements cash balances",
+        "approximately $ 33.58 billion at the federal reserve",
+        "percent change excess central bank balances",
+        "excess balances"
+      ],
+      "selected_history": [
+        [
+          "table_1"
+        ],
+        [
+          "table_1",
+          "text_3",
+          "text_4"
+        ],
+        [
+          "table_1",
+          "text_2",
+          "text_3",
+          "text_4"
+        ],
+        [
+          "table_1",
+          "text_2",
+          "text_3",
+          "text_4",
+          "text_6",
+          "text_10",
+          "text_30"
+        ]
+      ],
+      "steps": 28,
+      "task_id": "STT/2017/page_100.pdf-1",
+      "termination_reason": null,
+      "verdict": "task_failure",
+      "verification_history": [
+        {
+          "evidence_coverage": 0.5,
+          "passed": false,
+          "reason": "关键证据未被完整召回。"
+        },
+        {
+          "evidence_coverage": 0.5,
+          "passed": false,
+          "reason": "关键证据未被完整召回。"
+        },
+        {
+          "evidence_coverage": 0.5,
+          "passed": false,
+          "reason": "关键证据未被完整召回。"
+        }
+      ]
+    }
+  ],
+  "clean_sft_candidates": 2,
+  "clean_sft_rate": 0.4,
+  "failed_action_distribution": {
+    "emit_program": 1,
+    "open_evidence": 1,
+    "search": 2,
+    "select_evidence": 1
+  },
+  "fully_grounded": 4,
+  "fully_grounded_rate": 0.8,
+  "program_attempts": 7,
+  "samples": 5,
+  "schema_repairs": 0,
+  "schema_version": "finsight-teacher-quality-audit-v1",
+  "searches": 23,
+  "task_success_rate": 0.8,
+  "task_successes": 4,
+  "verdicts": {
+    "clean_sft_candidate": 2,
+    "task_failure": 1,
+    "task_succeeded_but_trace_unclean": 2
+  }
+}
